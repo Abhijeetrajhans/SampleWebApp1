@@ -11,6 +11,29 @@
             line-height: 1.6;
             margin: 20px;
         }
+
+        .footer {
+            text-align: center;
+        }
+
+        .social-text {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #000; /* Adjust the color as needed */
+            font-family: "Times New Roman", serif
+        }
+
+        .social-text:hover {
+            text-decoration: underline;
+        }
+
+        #status {
+            font-weight: bold;
+            font-size: 48px; /* Adjust the font size as needed */
+            color: #333; /* Adjust the color as needed */
+            margin-top: 10px; /* Adjust the margin as needed */
+        }
     </style>
 </head>
 
@@ -30,6 +53,10 @@
 
     <div>
         <h1>Hello, I'm Abhijeet Rajhans</h1>
+
+        <br/>
+        <p id="status">I am a CSE Undergrad</p>
+        <br/>
         <br/>
         <h3>Introduction?? Yeps, not just a &lt;hello world&gt;</h3>
         <p>
@@ -83,6 +110,37 @@
             📧: ar.abhijeetrajhans@gmail.com
         </p>
     </div>
+
+    <br/>
+    <br/>
+
+    <div class="footer">
+    <h3>Abhijeet Rajhans</h3>
+    <div class="social-icons">
+        <a href="mailto:ar.abhijeetrajhans@gmail.com" target="_blank" class="social-text">Email Me</a>
+        <a href="mailto:abhijeetrajhans.ar@yahoo.com" target="_blank" class="social-text">Yahoo Mail</a>
+        <a href="https://www.linkedin.com/in/abhijeetrajhans/" target="_blank" class="social-text">LinkedIn</a>
+        <a href="https://www.instagram.com/abhijeetrajhans/" target="_blank" class="social-text">Instagram</a>
+    </div>
+</div>
+
+    <script>
+        // JavaScript code to change the text every few seconds
+        const changingText = document.getElementById('changingText');
+        const status = document.getElementById('status');
+
+        const textArray = ["I am a CSE Undergrad", "I am a Sophomore", "I am a Programmer", "I am a Keen Learner!"];
+        let currentIndex = 0;
+
+        function updateText() {
+            status.innerHTML = textArray[currentIndex];
+            currentIndex = (currentIndex + 1) % textArray.length;
+        }
+
+        // Update text every 2 seconds (adjust the time interval as needed)
+        setInterval(updateText, 2000);
+    </script>
+
 
 </body>
 
