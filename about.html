@@ -7,155 +7,160 @@
     <title>About Me</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #000;
-            color: #fff;
-        }
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #000;
+    color: #fff;
+}
 
-        h1,
-        h2,
-        p {
-            color: #fff;
-        }
+h1, h2, p {
+    color: #fff;
+}
 
-        /* Navigation Bar Styles */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 15px;
-            border-radius: 0px;
-            z-index: 1000;
-        }
+/* Navigation Bar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 0px;
+    z-index: 1000;
+}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease-in-out;
-        }
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
 
-        nav a:hover {
-            color: #007BFF;
-        }
+nav a:hover {
+    color: #007BFF;
+}
 
-        @media (max-width: 767px) {
-            nav {
-                flex-direction: column; /* Stack links vertically */
-                align-items: center; /* Center items horizontally */
-                font-size: medium;
-                overflow-x: auto;
-                white-space: nowrap;
-                padding-left: 5px;
-            }
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        font-size: medium;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 
-            nav div {
-                flex-direction: column; /* Stack links vertically */
-                text-align: center; /* Center text within each link */
-                display: inline-block;
-            }
+    nav div {
+        flex-direction: column;
+        text-align: center;
+        display: inline-block;
+    }
 
-            nav a {
-                color: #fff;
-                text-decoration: none;
-                margin: 0 15px;
-                transition: color 0.3s ease-in-out;
-            }
-        }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease-in-out;
+    }
+}
 
-        nav a:visited {
-            color: inherit; /* Use the default color */
-        }
+nav a:visited {
+    color: inherit;
+}
 
-        /* Rounded Boxes Styles */
-        .rounded-box {
-            background-color: #333;
-            border: 2px solid transparent;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-            transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            color: white;
-            text-decoration: none;
-        }
+/* Rounded Boxes Styles */
+.rounded-box {
+    background: linear-gradient(45deg, #005555, #405555); /* Darkened turquoise-grey gradient */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
 
-        .rounded-box:hover {
-            border-color: #007BFF;
-            box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
-        }
+.rounded-box:hover {
+    border-color: #40E0D0; /* Turquoise border color on hover */
+    box-shadow: 0 0 10px rgba(64, 224, 208, 0.7); /* Turquoise glowing effect */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-        .links {
-            color: white;
-            text-decoration: none;
-        }
+/* Glowing Animation */
+@keyframes glowingBorder {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 5px rgba(64, 224, 208, 0.5);
+    }
+    100% {
+        border-color: #40E0D0;
+        box-shadow: 0 0 10px rgba(64, 224, 208, 0.7);
+    }
+}
 
-        .links a:visited {
-            color: white;
-        }
+/* Apply the animation to all rounded boxes */
+.rounded-box {
+    animation: glowingBorder 2s infinite alternate;
+}
 
-        .title {
-            margin-top: 65px;
-        }
+.title {
+    margin-top: 65px;
+}
 
-        @media (max-width: 800px) {
-            .title {
-                text-align: center; /* Center text within the element */
-            }
-        }
+@media (max-width: 800px) {
+    .title {
+        text-align: center;
+    }
+}
 
-        @media (max-width: 1080px) {
-            .title {
-                text-align: center; /* Center text within the element */
-                margin-top: 100px;
-                /* Add additional styles as needed for this screen size */
-            }
-        }
+@media (max-width: 1080px) {
+    .title {
+        text-align: center;
+        margin-top: 100px;
+    }
+}
 
-        .abhijeetrajhans {
-            position: fixed;
-            top: 6px;
-            right: 7px;
-            padding: 10px;
-            color: #ffffff; /* Set the text color as needed */
-            font-size: 18px;
-            z-index: 1000; /* Adjust the z-index as needed to ensure it appears on top */
-            font-family: "Franklin Gothic Medium", serif;
-        }
+.abhijeetrajhans {
+    position: fixed;
+    top: 6px;
+    right: 7px;
+    padding: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    z-index: 1000;
+    font-family: "Franklin Gothic Medium", serif;
+}
 
-        /* Media query for desktop mode */
-        @media (max-width: 767px) {
-            .abhijeetrajhans {
-                display: none; /* Hide in mobile view */
-            }
-        }
+/* Media query for desktop mode */
+@media (max-width: 767px) {
+    .abhijeetrajhans {
+        display: none;
+    }
+}
 
-        .abhijeetrajhans.hidden {
-            opacity: 0; /* Fade out when scrolled down */
-            pointer-events: none; /* Disable interaction when hidden */
-        }
+.abhijeetrajhans.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
-        .footer {
-            text-align: center;
-        }
+.footer {
+    text-align: center;
+}
 
-        .social-text {
-            display: inline-block;
-            margin: 0 10px;
-            text-decoration: none;
-            color: #ffffff; /* Adjust the color as needed */
-            font-family: "Times New Roman", serif
-        }
+.social-text {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Times New Roman", serif
+}
 
-        .social-text:hover {
-            text-decoration: underline;
-        }
+.social-text:hover {
+    text-decoration: underline;
+}
 
     </style>
 </head>
@@ -165,8 +170,7 @@
     <!-- Navigation Bar -->
     <nav>
         <div>
-            <a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a href="index.html">Home</a>
+            <a href="index.html">&nbsp;&nbsp;Home</a>
             <a href="summary.html">Summary</a>
             <a href="achievements.html">Achievements</a>
             <a href="projects.html">Projects</a>
