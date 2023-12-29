@@ -51,11 +51,21 @@
                 flex-direction: column; /* Stack links vertically */
                 align-items: center; /* Center items horizontally */
                 font-size: small;
+                overflow-x: auto;
+                white-space: nowrap;
             }
 
             nav div {
                 flex-direction: column; /* Stack links vertically */
                 text-align: center; /* Center text within each link */
+                display: inline-block;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 15px;
+                transition: color 0.3s ease-in-out;
             }
         }
 
@@ -235,7 +245,8 @@
             </p>
         </div>
     </div>
-
+    <br/>
+    <br/>
 <div class="footer">
     <h3>Abhijeet Rajhans</h3>
     <div class="social-icons">
