@@ -112,11 +112,106 @@
             animation: none; /* Remove animation for the focused box */
             border: 2px solid #61dafb; /* Border color for the focused box */
         }
+
+        .footer {
+            text-align: center;
+        }
+
+        .social-text {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffffff; /* Adjust the color as needed */
+            font-family: "Times New Roman", serif
+        }
+
+        .social-text:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 0px;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                flex-direction: column; /* Stack links vertically */
+                align-items: center; /* Center items horizontally */
+                font-size: medium;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            nav div {
+                flex-direction: column; /* Stack links vertically */
+                text-align: center; /* Center text within each link */
+                display: inline-block;
+            }
+
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 15px;
+                transition: color 0.3s ease-in-out;
+            }
+        }
+
+        nav a:visited {
+            color: inherit; /* Use the default color */
+        }
+
+        .title {
+            margin-top: 65px;
+        }
+
+        @media (max-width: 800px) {
+            .title {
+                text-align: center; /* Center text within the element */
+            }
+        }
+
+
     </style>
 </head>
 
 <body>
-    <h1>Projects</h1>
+
+    <nav>
+        <div>
+            <a href="index.html">&nbsp;&nbsp;Home</a>
+            <a href="summary.html">Summary</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="about.html">About</a>
+            <a href="articles.html">Articles</a>
+        </div>
+    </nav>
+
+    <br/>
+    <br/>
+
+    <h1 class="title">Projects</h1>
     <br/>
 
     <div class="project">
@@ -211,12 +306,25 @@
         <p class="skills">Skills: Python · Tkinter · Machine Learning · Project Showcase · Tech Innovation</p>
     </div>
 
+    <br/>
+    <br/>
+
+    <div class="footer">
+        <h3>Abhijeet Rajhans</h3>
+        <div class="social-icons">
+            <a href="mailto:ar.abhijeetrajhans@gmail.com" target="_blank" class="social-text">Email Me</a>
+            <a href="mailto:abhijeetrajhans.ar@yahoo.com" target="_blank" class="social-text">Yahoo Mail</a>
+            <a href="https://www.linkedin.com/in/abhijeetrajhans/" target="_blank" class="social-text">LinkedIn</a>
+            <a href="https://www.instagram.com/abhijeetrajhans/" target="_blank" class="social-text">Instagram</a>
+        </div>
+    </div>
+
 <script>
     setTimeout(function() {
         var projects = document.querySelectorAll('.project');
         projects[0].classList.remove('active');
         projects[1].classList.add('active');
-    }, 5000);
+    }, 10000);
 </script>
 
 </body>
