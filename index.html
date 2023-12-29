@@ -10,6 +10,8 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 20px;
+            background-color: #121212; /* Dark background color */
+            color: #fff;
         }
 
         .footer {
@@ -20,7 +22,7 @@
             display: inline-block;
             margin: 0 10px;
             text-decoration: none;
-            color: #000; /* Adjust the color as needed */
+            color: #ffffff; /* Adjust the color as needed */
             font-family: "Times New Roman", serif
         }
 
@@ -31,34 +33,156 @@
         #status {
             font-weight: bold;
             font-size: 48px; /* Adjust the font size as needed */
-            color: #333; /* Adjust the color as needed */
+            color: #666666; /* Adjust the color as needed */
             margin-top: 10px; /* Adjust the margin as needed */
         }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-box {
+            background-color: #212121; /* Darker background color for the boxes */
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Glowing effect */
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        /* Default styles for desktop */
+        .pic {
+            display: block; /* Ensures the image is a block element */
+            margin-left: auto; /* Aligns the image to the right on desktop */
+            margin-right: 20px;
+            position: absolute;
+            right: 0;
+            border-radius: 10px; /* Adjust the value to control the roundness */
+            overflow: hidden;
+            top: 70px;
+            max-width: 350px; /* Adjust the maximum width as needed */
+            height: auto;
+        }
+
+        /* Media query for tablets (landscape and portrait) and larger phones */
+        @media (max-width: 800px) {
+            .pic {
+                display: block; /* Reset display property */
+                margin: 0 auto; /* Center the image horizontally */
+                position: revert;
+                margin-top: 100px;
+                max-width: 250px; /* Adjust the maximum width as needed */
+                height: auto;
+            }
+        }
+
+        .block-1 {
+            display: inline-block;
+            flex: 1;
+            position: relative;
+        }
+
+        .abhijeetrajhans {
+            position: fixed;
+            top: 6px;
+            right: 7px;
+            padding: 10px;
+            color: #ffffff; /* Set the text color as needed */
+            font-size: 18px;
+            z-index: 1000; /* Adjust the z-index as needed to ensure it appears on top */
+            font-family: "Franklin Gothic Medium", serif;
+        }
+
+        /* Media query for desktop mode */
+        @media (max-width: 767px) {
+            .abhijeetrajhans {
+                display: none; /* Hide in mobile view */
+            }
+        }
+
+        .abhijeetrajhans.hidden {
+            opacity: 0; /* Fade out when scrolled down */
+            pointer-events: none; /* Disable interaction when hidden */
+        }
+
+        @media (max-width: 767px) {
+        nav {
+            flex-direction: column; /* Stack links vertically */
+            align-items: center; /* Center items horizontally */
+        }
+
+        nav div {
+            flex-direction: column; /* Stack links vertically */
+            text-align: center; /* Center text within each link */
+        }
+}
+
+
+
     </style>
 </head>
 
 <body>
-    <img src="https://media.licdn.com/dms/image/D4D03AQFE35hbQAtMrA/profile-displayphoto-shrink_400_400/0/1686855532687?e=1709164800&v=beta&t=bhcup1V_typ6hHHcSo_H7VegZmJgAk--IPF6tizs7Dk">
-
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="summary.html">Summary</a></li>
-            <li><a href="articles.html">Articles</a></li>
-            <li><a href="achievements.html">Achievements</a></li>
-        </ul>
+        <div>
+            <a href="/">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="summary.html">Summary</a>
+            <a href="articles.html">Articles</a>
+            <a href="achievements.html">Achievements</a>
+        </div>
     </nav>
 
+    <img class="pic" src="https://media.licdn.com/dms/image/D4D03AQFE35hbQAtMrA/profile-displayphoto-shrink_400_400/0/1686855532687?e=1709164800&v=beta&t=bhcup1V_typ6hHHcSo_H7VegZmJgAk--IPF6tizs7Dk">
+
+    <div class="abhijeetrajhans">a b h i j e e t r a j h a n s&nbsp;&nbsp;&nbsp;</div>
+
     <div>
-        <h1>Hello, I'm Abhijeet Rajhans</h1>
+        <div class="block-1">
+            <br/>
+            <br/>
+            <h1>Hello, I'm Abhijeet Rajhans</h1>
+
+            <br/>
+            <p id="status">I am a CSE Undergrad</p>
+        </div>
 
         <br/>
-        <p id="status">I am a CSE Undergrad</p>
         <br/>
         <br/>
-        <h3>Introduction?? Yeps, not just a &lt;hello world&gt;</h3>
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="intro-box">
+            <h3>Introduction?? Yeps, not just a &lt;hello world&gt;</h3>
         <p>
             I'm a Computer Science Engineering student at Manipal University Jaipur, majoring in Computer Science. With
             experience as a former intern at Teachnook, I bring a passion for technology and a dedication to mastering
@@ -109,6 +233,7 @@
             📧: abhijeetrajhans.ar@yahoo.com <br/>
             📧: ar.abhijeetrajhans@gmail.com
         </p>
+        </div>
     </div>
 
     <br/>
@@ -139,7 +264,23 @@
 
         // Update text every 2 seconds (adjust the time interval as needed)
         setInterval(updateText, 2000);
+
+        // Hide element after scrolling a certain distance
+        document.addEventListener('DOMContentLoaded', function () {
+            var hideElement = document.querySelector('.abhijeetrajhans');
+            var scrollDistance = 10; // Adjust the scroll distance as needed
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > scrollDistance) {
+                    hideElement.classList.add('hidden');
+                } else {
+                    hideElement.classList.remove('hidden');
+                }
+            });
+        });
     </script>
+
+
 
 
 </body>
