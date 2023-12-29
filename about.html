@@ -70,11 +70,22 @@
             padding: 15px;
             margin-bottom: 15px;
             transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            color: white;
+            text-decoration: none;
         }
 
         .rounded-box:hover {
             border-color: #007BFF;
             box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
+        }
+
+        .links {
+            color: white;
+            text-decoration: none;
+        }
+
+        .links a:visited {
+            color: white;
         }
 
         .title {
@@ -90,7 +101,7 @@
         @media (max-width: 1080px) {
             .title {
                 text-align: center; /* Center text within the element */
-                margin-top: 200px;
+                margin-top: 100px;
                 /* Add additional styles as needed for this screen size */
             }
         }
@@ -116,6 +127,22 @@
         .abhijeetrajhans.hidden {
             opacity: 0; /* Fade out when scrolled down */
             pointer-events: none; /* Disable interaction when hidden */
+        }
+
+        .footer {
+            text-align: center;
+        }
+
+        .social-text {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #ffffff; /* Adjust the color as needed */
+            font-family: "Times New Roman", serif
+        }
+
+        .social-text:hover {
+            text-decoration: underline;
         }
 
     </style>
@@ -200,11 +227,23 @@
     </div>
 
     <div class="rounded-box">
-        <p>
-            📧: <a href="mailto:abhijeetrajhans.ar@yahoo.com">abhijeetrajhans.ar@yahoo.com</a> <br/>
-            📧: <a href="mailto:ar.abhijeetrajhans@gmail.com">ar.abhijeetrajhans@gmail.com</a>
-        </p>
+        <div>
+            <p>
+                📧: <a href="mailto:abhijeetrajhans.ar@yahoo.com" class="links">abhijeetrajhans.ar@yahoo.com</a> <br/>
+                📧: <a href="mailto:ar.abhijeetrajhans@gmail.com" class="links">ar.abhijeetrajhans@gmail.com</a>
+            </p>
+        </div>
     </div>
+
+<div class="footer">
+    <h3>Abhijeet Rajhans</h3>
+    <div class="social-icons">
+        <a href="mailto:ar.abhijeetrajhans@gmail.com" target="_blank" class="social-text">Email Me</a>
+        <a href="mailto:abhijeetrajhans.ar@yahoo.com" target="_blank" class="social-text">Yahoo Mail</a>
+        <a href="https://www.linkedin.com/in/abhijeetrajhans/" target="_blank" class="social-text">LinkedIn</a>
+        <a href="https://www.instagram.com/abhijeetrajhans/" target="_blank" class="social-text">Instagram</a>
+    </div>
+</div>
 
 </body>
 
