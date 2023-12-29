@@ -22,13 +22,17 @@
 
         /* Navigation Bar Styles */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             background-color: #333;
             padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border-radius: 0px;
+            z-index: 1000;
         }
 
         nav a {
@@ -40,6 +44,22 @@
 
         nav a:hover {
             color: #007BFF;
+        }
+
+        @media (max-width: 767px) {
+            nav {
+                flex-direction: column; /* Stack links vertically */
+                align-items: center; /* Center items horizontally */
+            }
+
+            nav div {
+                flex-direction: column; /* Stack links vertically */
+                text-align: center; /* Center text within each link */
+            }
+        }
+
+        nav a:visited {
+            color: inherit; /* Use the default color */
         }
 
         /* Rounded Boxes Styles */
@@ -56,6 +76,40 @@
             border-color: #007BFF;
             box-shadow: 0 0 10px rgba(0, 123, 255, 0.7);
         }
+
+        .title {
+            margin-top: 65px;
+        }
+
+        @media (max-width: 800px) {
+            .title {
+                text-align: center; /* Center text within the element */
+            }
+        }
+
+        .abhijeetrajhans {
+            position: fixed;
+            top: 6px;
+            right: 7px;
+            padding: 10px;
+            color: #ffffff; /* Set the text color as needed */
+            font-size: 18px;
+            z-index: 1000; /* Adjust the z-index as needed to ensure it appears on top */
+            font-family: "Franklin Gothic Medium", serif;
+        }
+
+        /* Media query for desktop mode */
+        @media (max-width: 767px) {
+            .abhijeetrajhans {
+                display: none; /* Hide in mobile view */
+            }
+        }
+
+        .abhijeetrajhans.hidden {
+            opacity: 0; /* Fade out when scrolled down */
+            pointer-events: none; /* Disable interaction when hidden */
+        }
+
     </style>
 </head>
 
@@ -72,8 +126,10 @@
         </div>
     </nav>
 
+    <div class="abhijeetrajhans">a b h i j e e t r a j h a n s&nbsp;&nbsp;&nbsp;</div>
+
     <!-- About Me Content -->
-    <h1>About Me</h1>
+    <h1 class="title">About Me</h1>
 
     <!-- Paragraphs Inside Rounded Boxes -->
     <div class="rounded-box">
