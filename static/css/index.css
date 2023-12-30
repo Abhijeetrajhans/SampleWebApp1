@@ -200,12 +200,14 @@ nav a:visited {
         padding: 20px 20px 20px 20px;
         /*padding: 18px calc(20px + 15px); /* Add padding to the sides and include it in the scrollbar */
         width: 100%; /* Set the width to 100% or adjust as needed */
+        margin-outside: 20px;
     }
 
     nav div {
         flex-direction: column; /* Stack links vertically */
         text-align: center; /* Center text within each link */
         display: inline-block;
+        margin-left: 50px;
     }
 
     nav a {
