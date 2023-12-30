@@ -197,7 +197,8 @@ nav a:visited {
         overflow-x: auto;
         white-space: nowrap;
         overflow: auto; /* Allow horizontal scrolling */
-        padding: 18px calc(20px + 15px); /* Add padding to the sides and include it in the scrollbar */
+        padding: 20px 20px 20px 20px;
+        /*padding: 18px calc(20px + 15px); /* Add padding to the sides and include it in the scrollbar */
         width: 100%; /* Set the width to 100% or adjust as needed */
     }
 
