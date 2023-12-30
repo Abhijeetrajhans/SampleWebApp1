@@ -188,14 +188,15 @@ nav a:visited {
     }
 
     nav {
+        scroll-margin: inherit;
+        overflow-wrap: normal;
+        overflow-scrolling: auto;
         flex-direction: column; /* Stack links vertically */
         align-items: center; /* Center items horizontally */
         font-size: medium;
         overflow-x: auto;
         white-space: nowrap;
-        overflow: auto; /* Allow horizontal scrolling */
-        padding: 20px calc(15px + 15px); /* Add padding to the sides and include it in the scrollbar */
-        width: 100%;
+        padding-left: 30px;
     }
 
     nav div {
@@ -207,9 +208,12 @@ nav a:visited {
     nav a {
         color: #fff;
         text-decoration: none;
-        margin: 0 15px;
+        margin: 0 20px;
         transition: color 0.3s ease-in-out;
     }
+
+
+
 }
 
 @media (min-width: 900px) {
