@@ -8,7 +8,7 @@ body {
 
 .footer {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .social-text {
@@ -38,7 +38,7 @@ body {
 
 .intro-box {
     position: relative;
-    top:70px; /* Adjust the top value as needed */
+    top:120px; /* Adjust the top value as needed */
     left: 50%; /* Center the box horizontally */
     transform: translateX(-50%); /* Center the box horizontally */
     background-color: #212121; /* Darker background color for the boxes */
@@ -138,7 +138,7 @@ nav a:visited {
 
 @media (max-width: 900px) {
     .scrollable-container {
-        top: 700px;
+        top: 730px;
         position: absolute;
         display: inline-flex;
         width: 100%;
@@ -208,3 +208,88 @@ nav a:visited {
         transition: color 0.3s ease-in-out;
     }
 }
+
+@media (min-width: 900px) {
+    .scrollable-container {
+        top: 500px;
+        position: absolute;
+        display: inline-flex;
+        width: 100%;
+        overflow: hidden;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .scrollable-wrapper {
+        display: flex;
+        scroll-snap-type: x mandatory;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS devices */
+        white-space: nowrap;
+        scroll-behavior: smooth;
+    }
+
+    /* Hide the scrollbar on WebKit browsers (Chrome, Safari) */
+    .scrollable-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .certificates {
+        margin-outside: 5px;
+        margin: 30px 15px 15px;
+        height: 176px;
+        width: 308px;
+        border-radius: 15px;
+        padding: 5px;
+        display: inline-block;
+        /* transition: transform .2s; */
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    }
+
+    /*.certificates:hover {*/
+    /*    padding: 10px;*/
+    /*    background-color: lightslategrey;*/
+    /*    image-resolution: from-image;*/
+    /*    transform: scale(1.1);*/
+    /*}*/
+
+    .image {
+        height: 176px;
+        width: 308px;
+        border-radius: 15px;
+    }
+
+    nav {
+        flex-direction: column; /* Stack links vertically */
+        align-items: start; /* Center items horizontally */
+        font-size: medium;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    nav div {
+        flex-direction: column; /* Stack links vertically */
+        text-align: center; /* Center text within each link */
+        display: inline-block;
+    }
+
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .intro-box {
+        position: relative;
+        top:190px; /* Adjust the top value as needed */
+        left: 50%; /* Center the box horizontally */
+        transform: translateX(-50%); /* Center the box horizontally */
+        background-color: #212121; /* Darker background color for the boxes */
+        padding: 20px;
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Glowing effect */
+    }
+}
+
