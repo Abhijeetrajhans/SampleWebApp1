@@ -265,6 +265,7 @@ nav a:visited {
 
     /* Firefox */
     overflow: -moz-scrollbars-none;
+
     border-radius: 10px;
 }
 
@@ -289,3 +290,4 @@ nav a:visited {
     background-color: #ddd;
     color: black;
 }
+
