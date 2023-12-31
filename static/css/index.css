@@ -138,7 +138,7 @@ nav a:visited {
 
 @media (max-width: 900px) {
     .scrollable-container {
-        top: 730px;
+        top: 800px;
         position: absolute;
         display: inline-flex;
         width: 100%;
@@ -187,39 +187,38 @@ nav a:visited {
         border-radius: 15px;
     }
 
-    nav {
-        scroll-margin: inherit;
-        overflow-wrap: normal;
-        overflow-scrolling: auto;
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center items horizontally */
-        font-size: medium;
-        overflow-x: auto;
-        white-space: nowrap;
-        overflow: auto; /* Allow horizontal scrolling */
-        padding: 20px 20px 20px 20px;
-        /*padding: 18px calc(20px + 15px); /* Add padding to the sides and include it in the scrollbar */
-        width: 100%; /* Set the width to 100% or adjust as needed */
-        margin-outside: 20px;
-    }
-
-    nav div {
-        flex-direction: column; /* Stack links vertically */
-        text-align: center; /* Center text within each link */
-        display: inline-block;
-        margin-left: 50px;
-    }
-
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        transition: color 0.3s ease-in-out;
-    }
 
 }
 
 @media (min-width: 900px) {
+    /*
+    Desktop
+    */
+    .pic {
+        display: block; /* Ensures the image is a block element */
+        margin-left: auto; /* Aligns the image to the right on desktop */
+        margin-right: 20px;
+        position: absolute;
+        right: 0;
+        border-radius: 10px; /* Adjust the value to control the roundness */
+        overflow: hidden;
+        top: 90px;
+        max-width: 350px; /* Adjust the maximum width as needed */
+        height: auto;
+    }
+
+    .abhijeetrajhans {
+        position: fixed;
+        top: 25px;
+        right: 7px;
+        padding: 10px;
+        color: #ffffff; /* Set the text color as needed */
+        font-size: 18px;
+        z-index: 1000; /* Adjust the z-index as needed to ensure it appears on top */
+        font-family: "Franklin Gothic Medium", serif;
+    }
+
+
     .scrollable-container {
         top: 500px;
         position: absolute;
@@ -270,27 +269,6 @@ nav a:visited {
         border-radius: 15px;
     }
 
-    nav {
-        flex-direction: column; /* Stack links vertically */
-        align-items: start; /* Center items horizontally */
-        font-size: medium;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-
-    nav div {
-        flex-direction: column; /* Stack links vertically */
-        text-align: center; /* Center text within each link */
-        display: inline-block;
-    }
-
-    nav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 0 15px;
-        transition: color 0.3s ease-in-out;
-    }
-
     .intro-box {
         position: relative;
         top:190px; /* Adjust the top value as needed */
@@ -301,5 +279,40 @@ nav a:visited {
         border-radius: 10px; /* Rounded corners */
         box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Glowing effect */
     }
+}
+.navigation {
+    overflow-x: auto;
+    background-color: #333;
+    white-space: nowrap;
+
+    /* WebKit (Chrome, Safari) */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+
+    /* Firefox */
+    overflow: -moz-scrollbars-none;
+    border-radius: 10px;
+}
+
+.navigation::-webkit-scrollbar {
+    width: 6px;
+}
+
+.navigation::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.navigation a {
+    display: inline-block;
+    padding: 14px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    text-align: center;
+}
+
+.navigation a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
