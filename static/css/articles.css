@@ -253,3 +253,28 @@ h1, h2, p {
         border-radius: 10px;
     }
 }
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column; /* Change to column layout for smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .text-section {
+        width: 100%; /* Full width for text on smaller screens */
+        text-align: center; /* Center text horizontally */
+    }
+
+    .image-section {
+        width: 70%; /* Adjust the width of image section for smaller screens */
+        margin-top: 20px; /* Add space between text and image */
+        border-radius: 10px;
+        overflow: hidden; /* Hide overflow to prevent rounding issues on smaller screens */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Make image responsive */
+        height: auto;
+    }
+}
