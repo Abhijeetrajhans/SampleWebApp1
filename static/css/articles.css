@@ -10,6 +10,41 @@ h1, h2, p {
     color: #fff;
 }
 
+/* Rounded Boxes Styles */
+.rounded-box {
+    background: linear-gradient(to bottom right, #008080, #000000); /* Darkened turquoise-grey gradient */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+.rounded-box:hover {
+    border-color: #40E0D0; /* Turquoise border color on hover */
+    box-shadow: 0 0 10px rgba(64, 224, 208, 0.7); /* Turquoise glowing effect */
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Glowing Animation */
+@keyframes glowingBorder {
+    0% {
+        border-color: transparent;
+        box-shadow: 0 0 5px rgba(64, 224, 208, 0.5);
+    }
+    100% {
+        border-color: #40E0D0;
+        box-shadow: 0 0 10px rgba(64, 224, 208, 0.7);
+    }
+}
+
+/* Apply the animation to all rounded boxes */
+.rounded-box {
+    animation: glowingBorder 2s infinite alternate;
+}
+
 .title {
     margin-top: 65px;
 }
@@ -163,10 +198,6 @@ h1, h2, p {
         color: white; /* Set the text color to white */
     }
 
-}
-
-.links {
-    color: white;
 }
 
 @media (max-width: 900px) {
